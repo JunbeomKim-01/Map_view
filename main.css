@@ -13,7 +13,7 @@ input, label, button, textarea, ul, li, label
 	-webkit-user-select: none;
 }
 
-@-webkit-keyframes rotate {
+/* @-webkit-keyframes rotate {
     0%{
         -webkit-transform: rotate3d(1,0,0,60deg) rotate3d(0,0,1,20deg);
     }
@@ -29,7 +29,7 @@ input, label, button, textarea, ul, li, label
     100%{
         -webkit-transform: rotate3d(1,0,0,60deg) rotate3d(0,0,1,380deg);
     }
-}
+} */
 
 .world
 {
@@ -84,35 +84,39 @@ input, label, button, textarea, ul, li, label
 }
 	.block-1
 	{
-		top:0;
+		top:70;
 		left:60%;
-		-webkit-transform: scaleZ(1.5);
+		transform: rotate(90deg);
+		/* -webkit-transform: scaleZ(1.5); */
 	}
 	.block-2
 	{
 		top:0;
-		left:30%;
-		-webkit-transform: scaleZ(2.5);
+		left:20%;
+		transform: rotate(130deg);
+		/* -webkit-transform: scaleZ(2.5); */
 	}
 	.block-3
 	{
-		top:20%;
+		top:70%;
 		left:10%;
-		-webkit-transform: scaleZ(1.2);
+		transform: rotate(135deg);
+		/* -webkit-transform: scaleZ(2); */
 	}
 	.block-4
 	{
-		top:20%;
-		left:30%;
-		-webkit-transform: scaleZ(1.8);
+		top:30%;
+		left:10%;
+		transform: rotate(40deg);
+		/* -webkit-transform: scaleZ(1.3); */
 	}
 	.block-5
 	{
-		top:20%;
-		left:50%;
+		top:0%;
+		left:45%;
 		-webkit-transform: scaleZ(1.8);
 	}
-	.block-6
+	/* .block-6
 	{
 		top:60%;
 		left:70%;
@@ -147,24 +151,24 @@ input, label, button, textarea, ul, li, label
 		top:80%;
 		left:20%;
 		-webkit-transform: scaleZ(2.9);
-	}
+	} */
 
-.building:hover
+.building:active
 {
 	-webkit-transform: rotate3d(0,0,1,900deg) scale3d(1, 1, 4);
 	background:#0ae;
 }
-	.building:hover>li
+	.building:active>li
 	{
 		background:#0ae;
 		opacity:.5;
 	}
-.building:active
+.building:visited
 {
 	-webkit-transform: translateZ(50px) scale3d(1, 1, 4);
 	background:#09c;
 }
-	.building:active>li
+	.building:visited>li
 	{
 		background:#09c;
 		opacity:.75;
@@ -181,7 +185,7 @@ input, label, button, textarea, ul, li, label
 .building .top
 {
     background:rgba(255,212,38,1);
-    width:50px;
+    width:100px;
     height:50px;
 	-webkit-transform: translate3d(0,0,50px);
 }
@@ -196,15 +200,17 @@ input, label, button, textarea, ul, li, label
 .building .east
 {
     background:rgba(217,174,0,1);
-	width:50px;
+	width:100px;
 	height:50px;
-	-webkit-transform-origin:100% 0;
-	-webkit-transform:rotate3d(0,1,0,90deg);
+	/* -webkit-transform-origin:100% 0; */
+	/* -webkit-transform:rotate3d(0,1,0,90deg);
+*/
 }
+
 .building .north
 {
     background:rgba(242,194,0,1);
-	width:50px;
+	width:100px;
 	height:50px;
 	-webkit-transform-origin:0 0;
 	-webkit-transform:rotate3d(1,0,0,90deg);
@@ -212,7 +218,7 @@ input, label, button, textarea, ul, li, label
 .building .south
 {
     background:rgba(255,204,0,1);
-	width:50px;
+	width:100px;
 	height:50px;
 	-webkit-transform-origin:100% 100%;
 	-webkit-transform:rotate3d(1,0,0,-90deg);
@@ -226,8 +232,8 @@ input, label, button, textarea, ul, li, label
 	top:50%;
 	left:50%;
 	background:#ccc;
-	width:350px;
-	height:30px;
+	width:700px;
+	height:24px;
 	overflow:visible;
     -webkit-transition: all 0.5s ease-out;
 	-webkit-transform: rotate3d(0,0,1,0deg);
@@ -235,21 +241,28 @@ input, label, button, textarea, ul, li, label
 }
 	.road-1
 	{
-		top:60%;
-		left:40%;
+		width: 500px;
+		top:50%;
+		left:-80%;
 		-webkit-transform:translateZ(.9px) rotate3d(0,0,1,90deg);
 	}
 	.road-2
 	{
-		top:40%;
-		left:20%;
+		width: 500px;
+		top:-19%;
+		left:-20%;
 		-webkit-transform: rotate3d(0,0,1,180deg);
 	}
 	.road-3
 	{
-		top:100%;
-		left:0;
-		-webkit-transform: rotate3d(0,0,1,180deg);
+		width: 700px;
+		height: 30px;
+		top:50%;
+		left:-24%;
+		-ms-transform: rotate(90deg);
+		/* -webkit-transform: rotate(100deg); */
+		 transform: rotate(135deg);
+		/* -webkit-transform: rotate3d(0,0,1,180deg); */
 	}
 
 .car
